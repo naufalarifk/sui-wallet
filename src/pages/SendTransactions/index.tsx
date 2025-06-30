@@ -1,8 +1,11 @@
 import { useWallet } from "@suiet/wallet-kit";
 import { Transaction } from "@mysten/sui/transactions";
-import { AppButton, AppInput } from "@/components";
+import { AppButton as Button, AppInput as Input } from "@/components";
+import { useState } from "react";
 
 export function SendTransaction() {
+  const [address, setAddress] = useState("");
+
   const wallet = useWallet();
 
   async function handleTransaction() {
@@ -32,10 +35,10 @@ export function SendTransaction() {
 
   return (
     <>
-      <AppButton>zamn zaniel</AppButton>
-      <AppInput />
+      <Button variant="default">zamn zaniel</Button>
+      <Input />
       <div className="cursor-pointer" onClick={() => handleTransaction()}>
-        click!
+        Send Transaction!
       </div>
     </>
   );
