@@ -1,6 +1,7 @@
-import React, { ButtonHTMLAttributes, forwardRef, ReactNode } from "react";
+import { ButtonHTMLAttributes, forwardRef, ReactNode } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/utils";
+import { Button } from "@heroui/react";
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
@@ -44,7 +45,7 @@ export const AppButton = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     return (
-      <button
+      <Button
         type="button"
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
@@ -73,7 +74,7 @@ export const AppButton = forwardRef<HTMLButtonElement, ButtonProps>(
           </svg>
         )}
         {isLoading ? "Please wait..." : children}
-      </button>
+      </Button>
     );
   }
 );

@@ -10,18 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroui/react": "^2.8.0-beta.10",
+    "@heroui/react": "^2.7.11",
     "@mysten/dapp-kit": "^0.16.10",
     "@mysten/sui": "^1.31.0",
     "@suiet/wallet-kit": "^0.4.1",
-    "@tailwindcss/vite": "^4.1.11",
     "@tanstack/react-query": "^5.80.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.19.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.11",
     "types": "^0.1.1"
   },
   "devDependencies": {
@@ -30,10 +29,13 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react-swc": "^3.9.0",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"

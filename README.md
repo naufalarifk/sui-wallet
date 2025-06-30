@@ -4,3 +4,4 @@
 - [ ] Initial Config
 - [ ] Improve UI
 - [ ] Add pages
+- [ ] Add variant

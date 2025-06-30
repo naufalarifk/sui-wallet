@@ -1,10 +1,13 @@
 import { useWallet } from "@suiet/wallet-kit";
 import { Transaction } from "@mysten/sui/transactions";
-import { AppButton as Button, AppInput as Input } from "@/components";
+// import { AppButton as Button, AppInput as Input } from "@/components";
 import { useState } from "react";
+import { Button } from "@heroui/button";
 
 export function SendTransaction() {
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState(
+    "0x64b83450f7c00cd1f3e1aed0f413b7c2f2df814ea4821f5768254f5b0212974f"
+  );
 
   const wallet = useWallet();
 
@@ -35,11 +38,13 @@ export function SendTransaction() {
 
   return (
     <>
-      <Button variant="default">zamn zaniel</Button>
-      <Input />
-      <div className="cursor-pointer" onClick={() => handleTransaction()}>
+      {/* <Button variant="default">
+        zamn zaniel
+      </Button> */}
+      {/* <Input /> */}
+      <Button color="danger" onPress={() => handleTransaction()}>
         Send Transaction!
-      </div>
+      </Button>
     </>
   );
 }

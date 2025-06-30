@@ -1,44 +1,45 @@
 import { Input } from "@heroui/input";
+import { VariantProps } from "@heroui/react";
+import { cva } from "class-variance-authority";
+import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
 
-export const AppInput = () => {
-  const placements = ["inside", "outside", "outside-left"];
-  type Placement = "inside" | "outside" | "outside-left";
+interface InputProps
+  extends InputHTMLAttributes<HTMLInputElement>,
+    VariantProps<typeof inputVariants> {
+  isLoading?: boolean;
+  children: ReactNode;
+}
 
-  return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2">
-        <h3 className="text-default-500 text-small">Without placeholder</h3>
-        <div className="flex w-full flex-wrap items-end md:flex-nowrap mb-6 md:mb-0 gap-4">
-          {placements.map((placement) => (
-            <Input
-              key={placement}
-              description={placement}
-              label="Email"
-              labelPlacement={placement as Placement}
-              type="email"
-              classNames={{
-                base: "focus:outline-none",
-                input: "focus:outline-none",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-2">
-        <h3 className="text-default-500 text-small">With placeholder</h3>
-        <div className="flex w-full flex-wrap items-end md:flex-nowrap mb-6 md:mb-0 gap-4">
-          {placements.map((placement) => (
-            <Input
-              key={placement}
-              description={placement}
-              label="Email"
-              labelPlacement={placement as Placement}
-              placeholder="Enter your email"
-              type="email"
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+const inputVariants = cva(
+  "block w-full text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+  {
+    variants: {
+      variant: {
+        default: "bg-white text-gray-900 border border-gray-300",
+        ghost: "bg-white2 text-gray2",
+        "outline-primary": "bg-transparent border border-primary text-primary",
+      },
+      size: {
+        sm: "h-9 rounded-2xl px-3",
+        default: "h-[54px] rounded-3xl px-4",
+        lg: "h-11 rounded-2xl px-8",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+export const AppInput = forwardRef<HTMLInputElement, InputProps>(
+  (
+    { className, variant, size, children, isLoading = false, ...props },
+    ref
+  ) => {
+    const placements = ["inside", "outside", "outside-left"];
+    type Placement = "inside" | "outside" | "outside-left";
+
+    return <></>;
+  }
+);
