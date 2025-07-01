@@ -42,7 +42,7 @@ export function SendTransaction() {
         zamn zaniel
       </Button> */}
       {/* <Input /> */}
-      <Button color="danger" onPress={() => handleTransaction()}>
+      <Button color="success" onPress={() => handleTransaction()}>
         Send Transaction!
       </Button>
     </>
