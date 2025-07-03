@@ -1,12 +1,11 @@
-import { SendTransaction } from "./pages/SendTransactions";
-import { ConnectButton } from "@suiet/wallet-kit";
-
+import Routes from "@/routes";
+import { NavigationBar } from "@/components";
 function App() {
   return (
-    <>
-      <SendTransaction />
-      <ConnectButton />
-    </>
+    <main>
+      <NavigationBar />
+      <Routes />
+    </main>
   );
 }
 

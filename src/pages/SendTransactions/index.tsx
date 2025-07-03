@@ -3,6 +3,8 @@ import { Transaction } from "@mysten/sui/transactions";
 // import { AppButton as Button, AppInput as Input } from "@/components";
 import { useState } from "react";
 import { Button } from "@heroui/button";
+import { ConnectButton } from "@suiet/wallet-kit";
+import { GlobalWrapper } from "@/components";
 
 export function SendTransaction() {
   const [address, setAddress] = useState(
@@ -37,14 +39,11 @@ export function SendTransaction() {
   }
 
   return (
-    <>
-      {/* <Button variant="default">
-        zamn zaniel
-      </Button> */}
-      {/* <Input /> */}
+    <GlobalWrapper>
       <Button color="success" onPress={() => handleTransaction()}>
         Send Transaction!
       </Button>
-    </>
+      <ConnectButton />
+    </GlobalWrapper>
   );
 }
